@@ -1,5 +1,9 @@
 import { LightningElement, track } from 'lwc';
 
+//import data service
+import AccountDataService from 'c/accountDataService';
+const accountDataService = new AccountDataService();
+
 export default class AccountTable extends LightningElement {
     hasRendered = false;
     @track accounts
@@ -16,8 +20,6 @@ export default class AccountTable extends LightningElement {
             return;
         }
         this.hasRendered = true;
-        
-        const accountDataService = this.template.querySelector('c-account-data-service');
         
         accountDataService.getAccounts()
             .then(result => {
