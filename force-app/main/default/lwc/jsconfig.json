@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/accountDataService": [
+                "accountDataService/accountDataService.js"
+            ],
+            "c/accountTable": [
+                "accountTable/accountTable.js"
+            ],
+            "c/apexServiceHandler": [
+                "apexServiceHandler/apexServiceHandler.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}
